@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import messagebox
 
-
+# This is a message to see how do things update on github desktop
 root = Tk()
 root.title("Tic Tac Toe")
 root.overrideredirect(True)
@@ -145,13 +145,16 @@ def winner_animation():
 
     def animation(frame_count):
         global anim
-        new_image = image_list[frame_count]
+        try:
+            new_image = image_list[frame_count]
 
-        gif_label.configure(image=new_image)
-        frame_count += 1
-        if frame_count == frames:
-            frame_count = 0
-        anim = root.after(100, lambda: animation(frame_count))
+            gif_label.configure(image=new_image)
+            frame_count += 1
+            if frame_count == frames:
+                frame_count = 0
+            anim = root.after(100, lambda: animation(frame_count))
+        except:
+            pass
 
     gif_label = Label(winner_window, image="")
     gif_label.pack()
@@ -227,6 +230,8 @@ def winner_check():
                 go_to_main_page()
 
             def new_game():
+                global is_x
+                is_x = True
                 winner_window.destroy()
                 start_game()
 
