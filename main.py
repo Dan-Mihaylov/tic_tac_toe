@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import messagebox
 
-# This is a message to see how do things update on github desktop
+# This is a message to see how do things update on gitHub desktop
 root = Tk()
 root.title("Tic Tac Toe")
 root.overrideredirect(True)
@@ -60,7 +60,7 @@ def go_to_main_page():
     game_logo = image("C:/Users/danie/PycharmProjects/tic_tac_toe/images/Tic.png")
     game_logo.pack(pady=20)
 
-    title = Label(main_menu_frame, text="Select Game Type", font="TimesNewRoman 30", fg="grey", anchor='s', pady=10)
+    title = Label(main_menu_frame, text="Select Game Type", font="helvetica 30", fg="grey", anchor='s', pady=10)
     title.pack(side=TOP, pady=15, anchor="center")
 
     start_game_button = Button(main_menu_frame, text="Single Game", font="helvetica 10", pady=10, padx=30, width=25,
@@ -292,25 +292,25 @@ def start_game():
 
     # will create Buttons for each option you got
 
-    b1 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b1 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b1, "b1"))
-    b2 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b2 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b2, "b2"))
-    b3 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b3 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b3, "b3"))
 
-    b4 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b4 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b4, "b4"))
-    b5 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b5 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b5, "b5"))
-    b6 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b6 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b6, "b6"))
 
-    b7 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b7 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b7, "b7"))
-    b8 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b8 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b8, "b8"))
-    b9 = Button(game_frame, text="M", font="Timesnewroman 30", bg="#404040", activebackground="#808080", fg="#404040",
+    b9 = Button(game_frame, text="M", font="helvetica 30", bg="#404040", activebackground="#808080", fg="#404040",
                 activeforeground="#808080", command=lambda: clicked(b9, "b9"))
 
     b1.grid(row=1, column=1, sticky=NSEW)
@@ -339,7 +339,7 @@ def multiplayer_game():
     main_menu_frame = LabelFrame(root, width=400, height=600)
     main_menu_frame.pack(fill=BOTH, expand=True)
 
-    instruction_label = Label(main_menu_frame, text="Insert Players Names", font="TimesNewRoman 30", fg="grey",
+    instruction_label = Label(main_menu_frame, text="Insert Players Names", font="helvetica 30", fg="grey",
                               anchor='center', pady=80)
     instruction_label.pack(anchor="center")
 
