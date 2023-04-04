@@ -1,4 +1,4 @@
-# tic_tac_toe
+# Simple Tic Tac Toe Game
 First Python Project To Practice Basic Python Knowledge And Learn Tkinter GUI and Pillow
 
 
@@ -40,4 +40,6 @@ When selecting Multiplayer in the Main Menu, you are given the options to get pl
 ![multiplayer option](https://user-images.githubusercontent.com/123562461/215782976-cfa1bba9-08c2-41da-beea-d32b8be90bf7.png)
 
 Overall the creating the game has helped me understand basic funtionality of Tkinter library and practice simple Python List and Dictionary functions.
+
+### demo.exe file added to test the game in the [Demo](https://github.com/Dan-Mihaylov/tic_tac_toe/blob/main/Demo/Demo.exe) directory
 
