@@ -2,6 +2,8 @@ from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import messagebox
 
+from web_image import use_web_image
+
 # This is a message to see how do things update on gitHub desktop
 root = Tk()
 root.title("Tic Tac Toe")
@@ -18,18 +20,11 @@ is_x = True
 # Creating variables for the logo image of the game
 my_img_label = Label
 my_img = Image
+link = "https://i.ibb.co/x76RQpg/Tic.png"
+# Creating the logo image
 
-
-# Create the image we are using for the main page.
-# It will return a Label widget with the image inside it, just have to display it.
-def image(path):
-    global my_img_label, my_img, main_menu_frame
-    my_img = Image.open(path)
-    image_resize = Image.Image.resize(my_img, (50, 50))
-    my_img = ImageTk.PhotoImage(image_resize)
-    my_img_label = Label(main_menu_frame, image=my_img)
-    return my_img_label
-
+logo_instance = use_web_image.WebImage(link)
+logo = logo_instance.get()
 
 player_one_name = ""
 player_two_name = ""
@@ -57,8 +52,9 @@ def go_to_main_page():
     main_menu_frame = LabelFrame(root, width=400, height=600, relief=FLAT)
     main_menu_frame.pack(fill=BOTH, expand=True)
 
-    game_logo = image("C:/Users/danie/PycharmProjects/tic_tac_toe/images/Tic.png")
-    game_logo.pack(pady=20)
+    logo_label = Label(main_menu_frame, image=logo)
+    logo_label.pack(pady=20)
+
 
     title = Label(main_menu_frame, text="Select Game Type", font="helvetica 30", fg="grey", anchor='s', pady=10)
     title.pack(side=TOP, pady=15, anchor="center")
@@ -124,7 +120,7 @@ def winner_animation():
     winner_label = Label(winner_window, text=f"The Winner Is {player}", font="helvetica 26 bold", fg="red")
     winner_label.pack(pady=20)
 
-    file = 'C:/Users/danie/PycharmProjects/tic_tac_toe/images/firework2.gif'
+    file = 'images/firework2.gif'
     gif = Image.open(file)
 
     frames = gif.n_frames
